@@ -1,0 +1,10 @@
+{
+    "name": "Lorem ipsum dolor sit amet",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus nulla, fringilla non nunc ut, tempus dignissim tortor. Cras tincidunt neque nibh.\n Aenean felis erat, fringilla euismod pellentesque a, dignissim in metus. Donec eu libero magna. Etiam lacinia finibus odio eget ullamcorper.",
+    "info": "LOREM IPSUM",
+    "price": 12.99,
+    "votes": 33,
+    "rating": 4.5,
+    "isClean": true,
+    "imgSource": "./product.png"
+}

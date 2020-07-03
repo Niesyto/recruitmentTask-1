@@ -1,0 +1,61 @@
+.noMargin{
+    margin:0px
+}
+
+.ProductPageRoot{
+    height: calc(100% - 100px);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ImageBox{
+    display: grid;
+}
+
+.Image{
+    max-width: 35vh;
+    max-height: 35vh;
+    margin: auto;
+}
+
+.DescriptionText{
+    color:rgb(32, 32, 32);
+    font-size: larger;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.InfoText{
+    color: #9e9d9d;
+    font-size: small;
+}
+
+.VotesText{
+    margin-right: 30px;
+    color: #757575;
+}
+
+@media (max-width: 600px){
+    .DescriptionText{ 
+        font-size: smaller;
+    }
+}
+
+.Stars {
+    --star-color: #d7d7d7;
+    --star-background: #8f0f32;
+    --percent: calc(var(--rating) / 5 * 100%);  
+    display: inline-block;
+    font-size: var(--star-size);
+    font-family: Times;
+    line-height: 1;  
+  }
+
+.Stars::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
