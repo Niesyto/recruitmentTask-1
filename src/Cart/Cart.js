@@ -10,7 +10,7 @@ export default function Cart() {
       <Button>
         Apply
       </Button>
-      <Collapsible>DUPSKO</Collapsible>
+      <Collapsible>content</Collapsible>
     </div>
   );
 }
