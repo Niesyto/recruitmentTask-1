@@ -3,11 +3,10 @@ import './Button.css';
 
 export default function Button(props) {
     return (
-        <button className="Button" >
-            <div className="ButtonText">
+        <button className={"Button "+ props.variant} >
+            <div className={props.variant==="Small"?"ButtonText TextSmall":"ButtonText"}>
                 <p> {props.children}</p>
             </div>
         </button>
     );
 }
-

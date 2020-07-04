@@ -1,8 +1,8 @@
 .Button{
     margin: 0px auto;
     background-color: #8f0f32;
-    padding-left: 90px;
-    padding-right: 90px;
+    width:100%;
+    max-width: 350px;
     height: 50px;
     border-radius: 50px;
     align-items: center;
@@ -10,6 +10,7 @@
     justify-content: center;
     border-width: 0px;
     outline: none;
+    flex:1;
 }
 
 /*
@@ -23,7 +24,6 @@ Button after hovering
 .ButtonText{
     color: rgb(255, 255, 255);
     font-size: larger;
-    font-weight: 500;
 }
 
 /*
@@ -33,4 +33,13 @@ Button text on small screens
     .ButtonText{
         font-size: medium;
     }
+}
+
+.Small{
+    height: 33px; 
+}
+
+.TextSmall{
+    font-weight: 400;
+    font-size: small;
 }

@@ -1,0 +1,40 @@
+.Cart{
+    display: flex;
+    flex-direction: column;
+}
+
+.Title{
+    align-self: center;
+}
+
+.CostPanel{
+    border-width: 0px 0px 1px 0px;
+    border-color: #d2d2d245; 
+    border-style: outset;
+}
+
+.PriceSegment{
+    display: flex;
+    justify-content: space-between;
+}
+
+h5{
+    font-weight: 400;
+    display: inline;
+    margin: 10px 0px;
+}
+
+.CouponInput{
+    flex:2;
+    background-color: #f9f7f9;
+    border-radius: 30px;
+    border-color: #e3e1e3;
+    height: 30px;
+    padding: 0px 15px;
+    border-style: solid;
+    border-width: 1.5px;
+}
+
+.Spacing{
+    flex:0.2
+}

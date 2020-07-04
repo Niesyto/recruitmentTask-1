@@ -11,8 +11,8 @@ export default function Collapsible(props) {
 
     return (
         <>
-            <button type="button" className="Collapsible" onClick={handleClick}>     
-                <p className="noMargin"> Open Collapsible  <i className={open?"Arrow Up":"Arrow Down"}/></p>
+            <button type="button" className="Collapsible" onClick={handleClick}>
+                <p className="noMargin"> {props.text}  <i className={open ? "Arrow Up" : "Arrow Down"} /></p>
             </button>
             <div className={open ? "Content Open" : "Content"}>
                 {props.children}

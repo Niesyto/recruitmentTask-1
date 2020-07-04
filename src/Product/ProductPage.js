@@ -48,7 +48,7 @@ export default function ProductPage() {
             </div>
 
             <Button onClick={handlePurchase}>
-                Purchase ‧ ${item.price}
+                {`Purchase ‧ $${item.price}`}
             </Button>
 
 
