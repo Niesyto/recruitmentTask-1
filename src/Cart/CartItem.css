@@ -1,0 +1,26 @@
+.CartItemImage{
+   flex: 2; 
+   width: 40%;
+}
+
+.CartItemInfo{
+    flex:3;
+}
+
+.CartItemTitle{
+    margin-top: 0px;
+}
+
+.PriceText{
+    font-weight: 600;
+    display:block;
+}
+
+@media (min-width: 600px) {
+    .PriceText{
+        font-size: large;
+    }
+    .CartItemTitle{
+        font-size: larger;
+    }
+  }
