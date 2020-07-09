@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import './ProductPage.css';
 import IsCleanDisplay from './IsCleanDisplay.js';
-import Button from '../Button/Button.js'
+import Button from '../Button/Button.js';
+import { connect } from "react-redux";
+import { itemsChanged, subtotalChanged } from "../Redux/actions";
 
 
-export default function ProductPage() {
+function ProductPage(props) {
     //Product
     const [item, setItem] = React.useState();
 
@@ -22,8 +24,18 @@ export default function ProductPage() {
         )
 
     const handlePurchase = () => {
-        console.log("a");
+        props.itemsChanged({
+            name: item.name,
+            price: item.price,
+            quantity: 1,
+            image: item.imgSource
+        });
+        props.subtotalChanged(item.price);
     }
+
+    //If there are no items in cart
+    if (props.items.length !== 0)
+        return (null);
 
     return (
         <div className="ProductPageRoot">
@@ -46,12 +58,21 @@ export default function ProductPage() {
                         {sentence}
                     </div>)}
             </div>
-
-            <Button onClick={handlePurchase}>
-                {`Purchase ‧ $${item.price}`}
-            </Button>
-
-
+            <span>
+                <Button onClick={handlePurchase}>
+                    {`Purchase ‧ $${item.price}`}
+                </Button>
+            </span>
         </div>
     );
 }
+
+
+const mapStateToProps = (state) => {
+    return {
+        items: state.cartContent.items
+    }
+};
+const mapDispatchToProps = { itemsChanged, subtotalChanged };
+
+export const ProductPageContainer = connect(mapStateToProps, mapDispatchToProps)(ProductPage);

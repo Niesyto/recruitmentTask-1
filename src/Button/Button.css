@@ -6,10 +6,14 @@
     height: 50px;
     border-radius: 50px;
     align-items: center;
-    display: flex;
     justify-content: center;
     border-width: 0px;
     outline: none;
+    display:flex;
+}
+
+.ButtonContainer{
+    display:flex;
     flex:1;
 }
 

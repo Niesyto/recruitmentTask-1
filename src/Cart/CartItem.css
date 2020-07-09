@@ -7,6 +7,11 @@
     flex:3;
 }
 
+.CartItemContainer{
+    width:100%;
+    display:flex;
+}
+
 .CartItemTitle{
     margin-top: 0px;
 }

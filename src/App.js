@@ -1,6 +1,6 @@
 import React from 'react';
-import ProductPage from './Product/ProductPage.js';
-import Cart from './Cart/Cart.js';
+import { ProductPageContainer } from './Product/ProductPage.js';
+import { CartContainer } from './Cart/Cart.js';
 import './App.css';
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <div className="Sidebar background"></div>
       <div className="Databar background">
-        {/*<ProductPage/>*/}
-        <Cart />
+        <ProductPageContainer />
+        <CartContainer />
       </div>
       <div className="Sidebar background"></div>
     </div>

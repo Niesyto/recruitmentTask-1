@@ -6,13 +6,13 @@ export default function CartItem(props) {
 
     if (!props || !props.item)
         return (
-            <div style={{ display: "flex" }}>
+            <div className="CartItemContainer">
                 <h5>No data</h5>
             </div >
         )
 
     return (
-        <div style={{ display: "flex" }}>
+        <div className="CartItemContainer">
             <img src={props.item.image} alt="Product" className="CartItemImage" />
             <div className="CartItemInfo">
                 <h4 className="CartItemTitle">{props.item.name}</h4>
