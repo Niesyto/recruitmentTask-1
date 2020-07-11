@@ -11,10 +11,10 @@ export default function Collapsible(props) {
 
     return (
         <>
-            <button type="button" className="Collapsible" onClick={handleClick}>
+            <button type="button" className="Collapsible" onClick={handleClick} data-testid="testButton">
                 <p className="noMargin"> {props.text}  <i className={open ? "Arrow Up" : "Arrow Down"} /></p>
             </button>
-            <div className={open ? "Content Open" : "Content"}>
+            <div className={open ? "Content Open" : "Content"} data-testid="testContainer">
                 {props.children}
             </div>
         </>
