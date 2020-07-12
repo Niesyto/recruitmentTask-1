@@ -18,11 +18,15 @@ export function Cart(props) {
     props.discountChanged(discountText);
   }
 
-  if(!props.items)
-    return (<div></div>)
+  if (!props.items)
+    return (
+      <div></div>
+    );
 
-  if(props.items.length===0)
-    return (<div></div>)
+  if (props.items.length === 0)
+    return (
+      <div></div>
+    );
 
   return (
     <div className="Cart">
