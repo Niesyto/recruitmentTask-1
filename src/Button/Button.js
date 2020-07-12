@@ -6,8 +6,8 @@ export default function Button(props) {
         //Change className based on props
         <span className="ButtonContainer" onClick={props.onClick} data-testid="testButton">
             <button className={"Button " + props.variant} >
-                <div className={props.variant === "Small" ? "ButtonText TextSmall" : "ButtonText"}>
-                    <p> {props.children}</p>
+    <div >
+                     {/*<p> {props.children}</p>*/}
                 </div>
             </button>
         </span>
