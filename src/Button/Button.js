@@ -4,14 +4,14 @@ import './Button.css';
 export default function Button(props) {
 
     return (
-        <span>
+        <span onClick={props.onClick}>
             <button>
-            <div>
-            {props.children}
-        </div>
+                <div>
+                    {props.children}
+                </div>
             </button>
         </span>
-       
+
     );
 
 }
