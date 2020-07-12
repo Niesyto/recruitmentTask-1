@@ -2,14 +2,15 @@ import React from 'react';
 import './Button.css';
 
 export default function Button(props) {
+
     return (
-        //Change className based on props
-        <span className="ButtonContainer" onClick={props.onClick} data-testid="testButton">
+        <span className={"ButtonContainer " + props.variant} onClick={props.onClick} data-testid="testButton">
             <button className={"Button " + props.variant} >
                 <div className={props.variant === "Small" ? "ButtonText TextSmall" : "ButtonText"}>
-                    <p> {props.children}</p>
+                    {props.children}
                 </div>
             </button>
         </span>
+
     );
 }
