@@ -35,7 +35,7 @@ function ProductPage(props) {
 
     //If there are no items in cart
     if (props.items.length !== 0)
-        return (null);
+        return (<div></div>);
 
     return (
         <div className="ProductPageRoot">
