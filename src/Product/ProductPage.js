@@ -63,11 +63,10 @@ function ProductPage(props) {
                         {sentence}
                     </div>)}
             </div>  
-            <span>
-                <Button onClick={handlePurchase}>
-                    {`Purchase ‧ $${item.price}`}
-                </Button>
-            </span>
+            <Button onClick={handlePurchase}>
+                {`Purchase ‧ $${item.price}`}
+            </Button>
+       
       
         </div>
     );
