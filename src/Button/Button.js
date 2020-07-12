@@ -4,7 +4,7 @@ import './Button.css';
 export default function Button(props) {
 
     return (
-        <span onClick={props.onClick}>
+        <span className="ButtonContainer" onClick={props.onClick} data-testid="testButton">
             <button>
                 <div>
                     {props.children}
@@ -13,5 +13,6 @@ export default function Button(props) {
         </span>
 
     );
+
 
 }
