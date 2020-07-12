@@ -19,10 +19,10 @@ export function Cart(props) {
   }
 
   if(!props.items)
-    return (null)
+    return (<div></div>)
 
   if(props.items.length===0)
-    return (null)
+    return (<div></div>)
 
   return (
     <div className="Cart">
