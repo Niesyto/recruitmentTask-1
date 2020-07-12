@@ -62,14 +62,17 @@ function ProductPage(props) {
                     <div className="DescriptionText" key={index}>
                         {sentence}
                     </div>)}
-            </div>
-             {/*     
+            </div>  
             <span>
+                   {/*   
                 <Button onClick={handlePurchase}>
+                 */}
                     {`Purchase ‧ $${item.price}`}
+                     {/*   
                 </Button>
+                 */}
             </span>
-       */}
+      
         </div>
     );
 }
