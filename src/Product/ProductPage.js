@@ -44,27 +44,7 @@ function ProductPage(props) {
             <div className="ImageBox">
                 <img src={item.imgSource} className="Image" alt="Product" />
             </div>
-            <div>
-                <span className="InfoText">{item.info}</span>
-                <h1 className="noMargin">{item.name}</h1>
-            </div>
-            <div>
-                <div className="Stars" style={{ '--rating': item.rating }} aria-label={"Rating of this product is " + item.rating + " out of 5."} />
-                <span className="VotesText">{item.votes}</span>
-                <IsCleanDisplay isClean={item.isClean} />
-            </div>
-
-            <div>
-                {item.description.split("\n").map((sentence, index) =>
-                    <div className="DescriptionText" key={index}>
-                        {sentence}
-                    </div>)}
-            </div>
-            <span>
-                <Button onClick={handlePurchase}>
-                    {`Purchase ‧ $${item.price}`}
-                </Button>
-            </span>
+          
         </div>
     );
 }
