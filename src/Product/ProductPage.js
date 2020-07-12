@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './ProductPage.css';
 import IsCleanDisplay from './IsCleanDisplay.js';
-//import Button from '../Button/Button.js';
+import Button from '../Button/Button.js';
 import { connect } from "react-redux";
 import { itemsChanged, subtotalChanged } from "../Redux/actions";
 
@@ -64,6 +64,8 @@ function ProductPage(props) {
                     </div>)}
             </div>  
             <span>
+            <Button>
+            </Button>
                    {/*   
                 <Button onClick={handlePurchase}>
                  */}
