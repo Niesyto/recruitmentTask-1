@@ -5,7 +5,7 @@ export default function Button(props) {
 
     return (
         <span className="ButtonContainer" onClick={props.onClick} data-testid="testButton">
-            <button>
+            <button className={"Button " + props.variant} >
                 <div>
                     {props.children}
                 </div>
@@ -14,5 +14,5 @@ export default function Button(props) {
 
     );
 
-
+   
 }
