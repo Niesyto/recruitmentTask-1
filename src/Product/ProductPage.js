@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './ProductPage.css';
 import IsCleanDisplay from './IsCleanDisplay.js';
-import Button from '../Button/Button.js';
+//import Button from '../Button/Button.js';
 import { connect } from "react-redux";
 import { itemsChanged, subtotalChanged } from "../Redux/actions";
 
@@ -22,7 +22,7 @@ function ProductPage(props) {
         return (
             <>Loading...</>
         )
-
+/* 
     const handlePurchase = () => {
         props.itemsChanged({
             name: item.name,
@@ -32,7 +32,7 @@ function ProductPage(props) {
         });
         props.subtotalChanged(item.price);
     }
-    
+   */ 
 
     //If there are no items in cart
     if (props.items.length !== 0)
@@ -56,20 +56,20 @@ function ProductPage(props) {
                 <span className="VotesText">{item.votes}</span>
                 <IsCleanDisplay isClean={item.isClean} />
             </div>
-  {/*
+  
             <div>
                 {item.description.split("\n").map((sentence, index) =>
                     <div className="DescriptionText" key={index}>
                         {sentence}
                     </div>)}
             </div>
-                  */}
+             {/*     
             <span>
                 <Button onClick={handlePurchase}>
                     {`Purchase ‧ $${item.price}`}
                 </Button>
             </span>
-       
+       */}
         </div>
     );
 }
