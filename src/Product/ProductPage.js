@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './ProductPage.css';
-//import IsCleanDisplay from './IsCleanDisplay.js';
+import IsCleanDisplay from './IsCleanDisplay.js';
 //import Button from '../Button/Button.js';
 import { connect } from "react-redux";
 import { itemsChanged, subtotalChanged } from "../Redux/actions";
@@ -45,7 +45,7 @@ function ProductPage(props) {
             <div className="ImageBox">
                 <img src={item.imgSource} className="Image" alt="Product" />
             </div>
-            {
+            
             <div>
                 <span className="InfoText">{item.info}</span>
                 <h1 className="noMargin">{item.name}</h1>
@@ -56,7 +56,7 @@ function ProductPage(props) {
                 <span className="VotesText">{item.votes}</span>
                 <IsCleanDisplay isClean={item.isClean} />
             </div>
-  /*
+  {/*
             <div>
                 {item.description.split("\n").map((sentence, index) =>
                     <div className="DescriptionText" key={index}>
