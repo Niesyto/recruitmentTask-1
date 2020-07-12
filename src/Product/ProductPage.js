@@ -22,7 +22,7 @@ function ProductPage(props) {
         return (
             <>Loading...</>
         )
-/* 
+ 
     const handlePurchase = () => {
         props.itemsChanged({
             name: item.name,
@@ -32,7 +32,7 @@ function ProductPage(props) {
         });
         props.subtotalChanged(item.price);
     }
-   */ 
+   
 
     //If there are no items in cart
     if (props.items.length !== 0)
@@ -64,15 +64,9 @@ function ProductPage(props) {
                     </div>)}
             </div>  
             <span>
-            <Button>
-            </Button>
-                   {/*   
                 <Button onClick={handlePurchase}>
-                 */}
                     {`Purchase ‧ $${item.price}`}
-                     {/*   
                 </Button>
-                 */}
             </span>
       
         </div>
