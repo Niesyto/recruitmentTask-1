@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { discountChanged } from "../Redux/actions";
 
 
-function Cart(props) {
+export function Cart(props) {
   const [discountText, setDiscountText] = React.useState("");
 
   const handleDiscountChange = (event) => {
@@ -18,7 +18,10 @@ function Cart(props) {
     props.discountChanged(discountText);
   }
 
-  if (props.items.length === 0)
+  if(!props.items)
+    return (null)
+
+  if(props.items.length===0)
     return (null)
 
   return (
@@ -57,7 +60,7 @@ function Cart(props) {
       <Collapsible text="Apply promo codes" >
         <input type="text" className="CouponInput" placeholder="Promo code" value={discountText} onChange={handleDiscountChange}></input>
         <span className="Spacing" />
-        <Button style={{ height: "33px" }} variant="Small" onClick={handleClick}>
+        <Button style={{ height: "33px" }} variant="Small" onClick={handleClick} data-testid="applyButtonTest">
           Apply
         </Button>
       </Collapsible>
